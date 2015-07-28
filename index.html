@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Our favorite parks in the WORLD</title>
+
+	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+	<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+	<script src='https://code.jquery.com/jquery-2.1.4.js'></script>
+	<script src="tabletop1.3.4.js"></script>
+	<script type="text/javascript" src="jscolor/jscolor.js"></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<style>
+	  body { margin:0; padding:0; }
+	  #container { position:relative; margin: 0px auto; width: 80%; padding-top:20px;}
+	  #map { position:relative; height: 500px; width:75%; min-width: 320px; float: left; }
+	  h1, h2, h3, h4, h5, h6 {  color:#0A8455; }
+	  a { color: #0A8455;}
+	  .info {
+	    background:#fff;
+	    width:20%;
+	    border-radius:2px;
+	    min-width: 100px;
+	    overflow:auto;
+	    max-height: 500px;
+	 }
+    .info h4 { padding-left: 5px; }
+    .info .item {
+      display:block;
+      border-bottom:1px solid #eee;
+      padding:10px;
+      text-decoration:none;
+	  color: #0A8455;
+      }
+      .info .item small { color:#9AABA5; }
+      .info .item:hover,
+      .info .item.active { background:#f8f8f8; }
+      .info .item:last-child { border-bottom:none; }
+
+	</style>
+</head>
+
+<body>
+<div id='container' style='float:none;'>
+	<h1><em>Our</em> Favorite Parks in The World</h1>
+	<p>Looking to get away from campus and find somewhere beautiful? Drag the green marker to your location and find the closest park!</p>
+	<p>You can add your own park or make edits to the descriptions by editing <b><a href="https://docs.google.com/spreadsheets/d/1cBeTwtk9btLNkBMDlDC598Job7LUvHT2asGTHc-IcB0/edit#gid=1949338018" target="_blank">this spreadsheet</a></b> or by filling out the form below!</p> 
+</div>
+<div id='container'>
+    <div id='map'></div>
+    <div id='legend' style='display:none;'>
+  		<strong>Ann Arbor Parks</strong><br />
+	    <small>Made by JS! GO BLUE!</small>
+	 </div>
+	 <div id='info' class='info'>
+	 </div>
+</div>
+
+<div id='container' style='width:400px; padding-top: 80px;'>
+<hr />
+<form  target="_self" onsubmit="" action="javascript: postContactToGoogle()" >
+  <h3>Add your own park to the map!</h3>
+  <div class="form-group">
+    <label for="parkName">Park Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Enter the park name">
+  </div>
+
+  <div class="form-group">
+    <label for="description">Park Description</label>
+    <input type="text" class="form-control" id="description" placeholder="What do you love about this park?">
+  </div>
+
+  <div class="form-group">
+    <label for="lat">Latitude</label>
+    <input type="text" class="form-control" id="lat" placeholder="between -90 and 90">
+  </div>
+
+  <div class="form-group">
+    <label for="long">Longitutde</label>
+    <input type="text" class="form-control" id="long" placeholder="between -180 and 180">
+  </div>
+
+  <div class="form-group">
+    <label for="color">Pick a color for the marker!</label>
+    <input type="text" class="form-control color" id="color" value="#5367ce" />
+  </div>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+</div>
+
+<script src='script.js'></script>
+</body>
+
+</html>
