@@ -49,10 +49,12 @@
 
 <button onclick="getLocation()">Try It</button>
 
-<p id="demo"></p>
-
+<!-- <p id="posi"></p> -->
+<p id="posi"></p>
 <script>
-  var x = document.getElementById("demo");
+  // var x = document.getElementById("posi");
+  var userLat; 
+  var userLong; 
 
   function getLocation() {
     if (navigator.geolocation) {
@@ -64,8 +66,12 @@
   }
 
   function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude; 
+    // x.innerHTML = "Latitude: " + position.coords.latitude + 
+    // "<br>Longitude: " + position.coords.longitude; 
+    userLat = position.coords.latitude;
+    userLong = position.coords.longitude; 
+    console.log(userLat);
+    console.log(userLong);
   } 
   
   function showError(error) {
