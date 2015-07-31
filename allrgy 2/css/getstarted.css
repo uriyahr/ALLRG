@@ -18,6 +18,29 @@ html {
     width: 100%;
     height: 100%;
 }
+#about{
+    background-color: black;
+    width:100%
+}
+#search{
+    width:350px;
+    margin-left: 50px;
+}
+#button{
+   margin-right: 1420px;
+
+}
+#gstitle{
+    margin-top: -190px;
+}
+#restmap{
+    margin-top: -110px;
+    margin-right: -500px;
+}
+#activatebutt{
+    text-align: left;
+
+}
 
 h1,
 h2,
