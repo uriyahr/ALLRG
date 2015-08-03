@@ -26,7 +26,10 @@ html {
     width:350px;
     margin-left: 50px;
 }
-#button{
+#logo{
+    margin-top: -27px;
+}
+#buttonchoose{
    margin-right: 1420px;
 
 }
