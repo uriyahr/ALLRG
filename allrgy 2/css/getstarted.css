@@ -10,7 +10,7 @@ body {
     font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
     background-color: #754C78;
-    /*    darkslategrey #302B54 #88ACE0  4A777A  325C74*/
+    
 }
 
 html {
@@ -28,6 +28,13 @@ html {
     margin-left: 50px;
 }
 
+#logo{
+    margin-top: -27px;
+}
+#buttonchoose{
+   margin-right: 1420px;
+
+}
 #button {
     margin-right: 1420px;
 }
@@ -403,10 +410,6 @@ body {
     webkit-tap-highlight-color: rgba(255, 255, 255, .2);
 }
 
-#logo {
-    width="220";
-    height="90";
-}
 
 .vcenter {
     display: inline-block;
