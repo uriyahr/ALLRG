@@ -1,6 +1,6 @@
 var filter;
 var printFood;var ourData; 
-
+var restaurant;
 
 // tabletop code that turns the file into a json object called data
 document.addEventListener('DOMContentLoaded', function() {
@@ -23,6 +23,30 @@ function filterData(){
         }
     }
 } 
+
+
+function filterRestaurants()
+{
+            for(var i = 0; i <ourData.length; i++)
+            {
+                if(restaurant === "BJ's Brewhouse")
+                {
+                    if(ourData[i][filter] === "FALSE")
+                        {
+                            document.write(ourData[i]["entreename"])
+                        }
+                }
+                else
+                {
+                    if(ourData[i][filter] === "FALSE")
+                    {
+                        document.write(ourData[i]["entreename"])
+                    }
+                }
+            }
+        
+
+
 
 function filterDairy() {
   filter = "dairy";
@@ -50,3 +74,16 @@ function filterWheat() {
 function filterFish() {
    filter = "fish";
 }
+
+
+function filterApplebees()
+{
+    restaurant = "Applebee's";
+}
+
+function filterBJs()
+{
+    restaurant = "BJ's Brewhouse";
+}
+
+
