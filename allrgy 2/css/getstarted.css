@@ -208,12 +208,14 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background-color: #303030;
+    background: url("../spices.jpg") no-repeat top center scroll;
+    background-color: transparent;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
+
 
 .intro .intro-body {
     display: table-cell;
