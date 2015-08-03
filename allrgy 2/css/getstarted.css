@@ -17,6 +17,13 @@ body {
     margin-left: -150px;
 }
 
+#dropdownmenu{
+    margin-top: -250px;
+}
+#rest{
+    margin-top: -300px;
+}
+
 
 html {
     width: 100%;
