@@ -298,17 +298,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
+    border: 1px solid #A9A9F5;
+    color: #A9A9F5;
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1px solid #A9A9F5;
     outline: 0;
     color: #000;
-    background-color: #42dca3;
+    background-color: #A9A9F5;
 }
 
 ul.banner-social-buttons {
