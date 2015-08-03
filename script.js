@@ -87,4 +87,3 @@ function filterBJs()
 }
 
 
-if(restaurant > lat +  )
