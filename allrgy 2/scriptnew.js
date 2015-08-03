@@ -50,9 +50,10 @@ function showMenu()
 {
     for(var i =0; i < ourData.length; i++)
     {
-        document.write(ourData[i]["entreename"]);
+         
+                document.write(ourData[i]["entreename"]);
+        }
     }
-}
 
 function filterDairy() {
   filter = "dairy";
