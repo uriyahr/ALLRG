@@ -29,7 +29,7 @@ function filterRestaurants()
 {
     for(var i =0; i <ourData.length; i++)
     {
-        if(restaurant==="BJ's Brewhouse")
+        if("restaurantname"=== "BJ's Brewhouse")
         {
             if(ourData[i][filter] === "FALSE")
             {
@@ -46,14 +46,33 @@ function filterRestaurants()
     }
 }
 
-function showMenu()
+function showAppleMenu()
 {
+
     for(var i =0; i < ourData.length; i++)
     {
-         
-                document.write(ourData[i]["entreename"]);
+        if(ourData[i]["restaurantname"]==="Applebee's ")
+        {
+            document.write(ourData[i]["entreename"]);
+            document.write("<br>");
         }
     }
+}
+
+function showBJMenu()
+{
+    console.log(ourData);
+    for(var i =0; i< ourData.length; i++)
+    {
+        if(ourData[i]["restaurantname"]==="BJ's Brewhouse")
+        {
+            document.write(ourData[i]["entreename"]);
+            document.write("<br>");
+        }
+    }
+}
+
+
 
 function filterDairy() {
   filter = "dairy";
@@ -90,5 +109,5 @@ function filterApplebees()
 
 function filterBJs()
 {
-    restaurant = "BJ's Brewhouse"
+    restaurant = "BJ's Brewhouse";
 }
