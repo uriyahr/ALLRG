@@ -115,19 +115,38 @@
         </div>
         <br>
         <br>
-        <div id="activatebutt" class="container">
+
+<div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" id="choose" data-toggle="dropdown">Choose restaurant
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li id ="choose" role="presentation"><a role="menuitem" tabindex="-1" href="#">Applebee's</a></li>
+      <li id= "choose" role="presentation"><a role="menuitem" tabindex="-1" href="#">BJ's Brewhouse</a></li>
+    </ul>
+  </lidiv>
+</div>
+
+
+<script>
+$(document).ready(function(){
+    $(".dropdown-toggle").dropdown();
+});
+</script>
+
+        <!-- <div id="activatebutt" class="container">
             <div class="btn-group">
                 <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Choose Restaurants <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
+                </button> -->
+        
+                <!-- <ul class="dropdown-menu">
                     <li><a id="applebees">Apple Bee's</a>
                     </li>
                     <li><a id="bjs">BJ's Restaurant</a>
                     </li>
-                </ul>
-            </div>
-        </div>
+                </ul> -->
+       <!--      </div>
+        </div> -->
         <iframe id="restmap" width='600px' height='350px' frameBorder='0' src='https://a.tiles.mapbox.com/v4/uriyahr.47bd36bb/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoidXJpeWFociIsImEiOiJhNjM1ZGUxZDRkNjUzMjhkN2E5NDFhN2I4Mjg1Yjg1MiJ9.UKFi2_JWpCebW2UgH5FFuA'></iframe>
         <br>
         <br>
