@@ -1,5 +1,10 @@
+$(document).ready(function(){
+//    console.log("here");
+});
+
 var filter;
-var printFood;var ourData; 
+var printFood;
+var ourData; 
 var restaurant;
 
 
@@ -7,15 +12,19 @@ var restaurant;
 document.addEventListener('DOMContentLoaded', function() {
     var URL = "1beX_EbJAX2n4wFHuLdFHEk1vlxSPdbirjovCc2ZRK8o";
     Tabletop.init( { key: URL, callback: saveData, simpleSheet: true } )
-})
+});
 
 //function called by the tabletop code: converts their json object to geoJSON format that we want
 function saveData(data){
-    ourData=data; 
-
-    // document.getElementById("food") = ourData; 
+    ourData=data;
+    console.log(ourData);
+    showAppleMenu();
 }
+
+
+
 function filterData(){
+    
     for(var i = 0; i< ourData.length; i++)
     {
         if(ourData[i][filter] === "FALSE") {
@@ -48,13 +57,18 @@ function filterRestaurants()
 
 function showAppleMenu()
 {
-
+     $("#apple").empty();
     for(var i =0; i < ourData.length; i++)
     {
         if(ourData[i]["restaurantname"]==="Applebee's ")
         {
-            document.write(ourData[i]["entreename"]);
-            document.write("<br>");
+             console.log(ourData[i]["entreename"]); 
+            var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
+            $("#apple").append(lineItem);
+//            document.getElementById("apple").innerHTML= ourData[i]["entreename"];
+//            document.write(ourData[i]["entreename"]);
+           
+//            document.write("<br>");
         }
     }
 }

@@ -153,7 +153,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: white;
-    background: url("../foodopaque.jpg") no-repeat bottom center scroll;
+    background: url("img/pic2.png") no-repeat bottom center scroll;
     background-color: transparent;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -364,4 +364,3 @@ img::selection {
 img::-moz-selection {
     background: 0 0;
 }
-
