@@ -10,20 +10,19 @@ body {
     font-family: Lora, "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #fff;
     background-color: #754C78;
-    
 }
 
-#choose{
+#choose {
     margin-left: -150px;
 }
 
-#dropdownmenu{
+#dropdownmenu {
     margin-top: -250px;
 }
-#rest{
+
+#rest {
     margin-top: -300px;
 }
-
 
 html {
     width: 100%;
@@ -40,13 +39,14 @@ html {
     margin-left: 50px;
 }
 
-#logo{
+#logo {
     margin-top: -27px;
 }
-#buttonchoose{
-   margin-right: 1420px;
 
+#buttonchoose {
+    margin-right: 1420px;
 }
+
 #button {
     margin-right: 1420px;
 }
@@ -215,7 +215,6 @@ a:focus {
     background-size: cover;
     -o-background-size: cover;
 }
-
 
 .intro .intro-body {
     display: table-cell;
@@ -423,7 +422,6 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255, 255, 255, .2);
 }
-
 
 .vcenter {
     display: inline-block;
