@@ -28,7 +28,9 @@ function filterData(){
     for(var i = 0; i< ourData.length; i++)
     {
         if(ourData[i][filter] === "FALSE") {
-            document.write(ourData[i]["entreename"]);
+            //document.write(ourData[i]["entreename"]);
+            var filtered = '<p>' + ourData[i]["entreename"] + '</p>'
+            $("#filter").append(filtered);
             // document.getElementById("food").innerHTML.append(printFood);
         }
     }
@@ -80,8 +82,10 @@ function showBJMenu()
     {
         if(ourData[i]["restaurantname"]==="BJ's Brewhouse")
         {
-            document.write(ourData[i]["entreename"]);
-            document.write("<br>");
+            console.log(ourData[i]["entreename"]);
+            var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
+            $("#bj").append(lineItem);
+
         }
     }
 }
