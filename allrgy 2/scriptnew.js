@@ -50,27 +50,35 @@ function filterData(){
 
 function filterRestaurantsandData()
 {   
+    //goes through all the data from tabletop
     for(var i =0; i <ourData.length; i++)
     {
-
+        //checks which restaurant the user chooses  
         if(ourData[i]["restaurantname"]=== "BJ's Brewhouse")
         {
+            //empties out the all the menu items that showed up 
             $("#bj").empty();
+            //checks if the allergen is in the dish
             if(ourData[i][filter] === "FALSE")
             {
                 console.log(ourData[i]["entreename"]);
+                //prints all menu items that do not contain the specific menu item chosen 
                 var filtered = '<p>' + ourData[i]["entreename"] + '</p>';
                 $("#filter").append(filtered);
             }
         }
         else
         {
+            //checks which restaurant the user chooses 
             if(ourData[i]["restaurantname"]==="Applebee's ")
             {
+                //empties out all the menu items that showed up 
                 $("#apple").empty();
+                //checks if the allergen is contained in the dish 
                 if(ourData[i][filter] === "FALSE")
                 {
                     console.log(ourData[i]["entreename"]);
+                    //prints all menu items that do not contain the specific menu item chosen 
                     var filtered2 = '<p>' + ourData[i]["entreename"] + '</p>'; 
                     $("#filter2").append(filtered2);
                 }
