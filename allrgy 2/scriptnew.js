@@ -46,7 +46,7 @@ function filterData(){
     }
 } 
 
-
+//no control 1D
 
 function filterRestaurantsandData()
 {   
@@ -104,7 +104,7 @@ function showBJMenu()
         if(ourData[i]["restaurantname"]==="BJ's Brewhouse")
         {
              //console.log(ourData[i]["entreename"]); 
-            var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
+            var lineItem = '<li class="list-group-item" id="menu">' + ourData[i]["entreename"] + '</li>';
             $("#bj").append(lineItem);
 
         }
