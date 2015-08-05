@@ -1,6 +1,6 @@
-# [ALLRG](http://uriyahr.github.io/group-4/) - [Allergy Simplified](http://uriyahr.github.io/group-4/)
+# [ALLRG](http://uriyahr.github.io/ALLRG/) - [Allergy Simplified](http://uriyahr.github.io/ALLRG/)
 
-[ALLRG](http://uriyahr.github.io/group-4/) [allrgy simplified](http://uriyahr.github.io/group-4/) created by [Uriyah Ruiz, Riya Chandra, Shalini Kunapuli, Nicolle Ayon]. A free interactive guide for people with allergies eating away from home.
+[ALLRG](http://uriyahr.github.io/ALLRG/) [allrgy simplified](http://uriyahr.github.io/ALLRG/) created by [Uriyah Ruiz, Riya Chandra, Shalini Kunapuli, Nicolle Ayon]. A free interactive guide for people with allergies eating away from home.
 
 ## MISSION STATEMENT
 
