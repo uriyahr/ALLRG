@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //function called by the tabletop code: converts their json object to geoJSON format that we want
 function saveData(data){
     ourData=data;
-    console.log(ourData);
+    //console.log(ourData);
     var url = window.location.href;
     var lastPart = url.substr(url.lastIndexOf('/') + 1);
     if (lastPart === "filterBJ.html") 
@@ -49,25 +49,31 @@ function filterData(){
 
 
 function filterRestaurantsandData()
-{
+{   
     for(var i =0; i <ourData.length; i++)
     {
+
         if(ourData[i]["restaurantname"]=== "BJ's Brewhouse")
         {
             $("#bj").empty();
             if(ourData[i][filter] === "FALSE")
             {
+                console.log(ourData[i]["entreename"]);
                 var filtered = '<p>' + ourData[i]["entreename"] + '</p>';
                 $("#filter").append(filtered);
             }
         }
         else
         {
-            $("#apple").empty();
-            if(ourData[i][filter] === "FALSE")
+            if(ourData[i]["restaurantname"]==="Applebee's ")
             {
-                var filtered2 = '<p>' + ourData[i]["entreename"] + '</p>'; 
-                $("#filter").append(filtered2);
+                $("#apple").empty();
+                if(ourData[i][filter] === "FALSE")
+                {
+                    console.log(ourData[i]["entreename"]);
+                    var filtered2 = '<p>' + ourData[i]["entreename"] + '</p>'; 
+                    $("#filter2").append(filtered2);
+                }
             }
         }
     }
@@ -80,7 +86,7 @@ function showAppleMenu()
     {
         if(ourData[i]["restaurantname"]==="Applebee's ")
         {
-             console.log(ourData[i]["entreename"]); 
+            //console.log(ourData[i]["entreename"]); 
             var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
             $("#apple").append(lineItem);
 
@@ -96,7 +102,7 @@ function showBJMenu()
     {
         if(ourData[i]["restaurantname"]==="BJ's Brewhouse")
         {
-             console.log(ourData[i]["entreename"]); 
+             //console.log(ourData[i]["entreename"]); 
             var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
             $("#bj").append(lineItem);
 
