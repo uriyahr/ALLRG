@@ -17,8 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
 //function called by the tabletop code: converts their json object to geoJSON format that we want
 function saveData(data){
     ourData=data;
-    console.log(ourData);
-    showAppleMenu();
+    //console.log(ourData);
+    var url = window.location.href;
+    var lastPart = url.substr(url.lastIndexOf('/') + 1);
+    if (lastPart === "filterBJ.html") 
+        {
+            showBJMenu();
+        }
+    else
+        {
+            showAppleMenu();
+        }
+   
 }
 
 
@@ -29,29 +39,41 @@ function filterData(){
     {
         if(ourData[i][filter] === "FALSE") {
             //document.write(ourData[i]["entreename"]);
-            var filtered = '<p>' + ourData[i]["entreename"] + '</p>'
+            var filtered = '<p>' + ourData[i]["entreename"] + '</p>';
             $("#filter").append(filtered);
             // document.getElementById("food").innerHTML.append(printFood);
         }
     }
 } 
 
-function filterRestaurants()
-{
+
+
+function filterRestaurantsandData()
+{   
     for(var i =0; i <ourData.length; i++)
     {
-        if("restaurantname"=== "BJ's Brewhouse")
+
+        if(ourData[i]["restaurantname"]=== "BJ's Brewhouse")
         {
+            $("#bj").empty();
             if(ourData[i][filter] === "FALSE")
             {
-                document.write(ourData[i]["entreename"])
+                console.log(ourData[i]["entreename"]);
+                var filtered = '<p>' + ourData[i]["entreename"] + '</p>';
+                $("#filter").append(filtered);
             }
         }
         else
         {
-            if(ourData[i][filter] === "FALSE")
+            if(ourData[i]["restaurantname"]==="Applebee's ")
             {
-                document.write(ourData[i]["entreename"])
+                $("#apple").empty();
+                if(ourData[i][filter] === "FALSE")
+                {
+                    console.log(ourData[i]["entreename"]);
+                    var filtered2 = '<p>' + ourData[i]["entreename"] + '</p>'; 
+                    $("#filter2").append(filtered2);
+                }
             }
         }
     }
@@ -65,32 +87,31 @@ function showAppleMenu()
     {
         if(ourData[i]["restaurantname"]==="Applebee's ")
         {
-             console.log(ourData[i]["entreename"]); 
+            //console.log(ourData[i]["entreename"]); 
             var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
             $("#apple").append(lineItem);
-//            document.getElementById("apple").innerHTML= ourData[i]["entreename"];
-//            document.write(ourData[i]["entreename"]);
-           
-//            document.write("<br>");
+
         }
     }
 }
 
+
 function showBJMenu()
 {
- 
-    console.log(ourData);
+     $("#bj").empty();
     for(var i =0; i< ourData.length; i++)
     {
         if(ourData[i]["restaurantname"]==="BJ's Brewhouse")
         {
-            console.log(ourData[i]["entreename"]);
+             //console.log(ourData[i]["entreename"]); 
             var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
             $("#bj").append(lineItem);
 
         }
     }
 }
+
+
 
 
 
