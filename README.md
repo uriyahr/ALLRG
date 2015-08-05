@@ -13,6 +13,7 @@ Founded in 2015, ALLRG: Allergies Simplified strives to facilitate the lives of 
 Issues that we had with the project was working and debugging the algorithm to filter food. 
 
 ## Creator
+[HTML][JAVASCRIPT][JQUERY][CSS]
 Uriyah Ruiz, Riya Chandra, Shalini Kunapuli, Nicolle Ayon
 
 ## Copyright and License
