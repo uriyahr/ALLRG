@@ -82,6 +82,7 @@ function filterRestaurantsandData()
 function showAppleMenu()
 {
      $("#apple").empty();
+  
     for(var i =0; i < ourData.length; i++)
     {
         if(ourData[i]["restaurantname"]==="Applebee's ")
@@ -97,8 +98,14 @@ function showAppleMenu()
 
 function showBJMenu()
 {
+<<<<<<< HEAD
      $("#bj").empty();
     for(var i =0; i < ourData.length; i++)
+=======
+ 
+    console.log(ourData);
+    for(var i =0; i< ourData.length; i++)
+>>>>>>> 054ec1d9aaa40d9cadb8c366773bb821145d7366
     {
         if(ourData[i]["restaurantname"]==="BJ's Brewhouse")
         {
