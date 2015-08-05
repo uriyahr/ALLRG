@@ -60,6 +60,7 @@ function filterRestaurants()
 function showAppleMenu()
 {
      $("#apple").empty();
+  
     for(var i =0; i < ourData.length; i++)
     {
         if(ourData[i]["restaurantname"]==="Applebee's ")
@@ -77,6 +78,7 @@ function showAppleMenu()
 
 function showBJMenu()
 {
+ 
     console.log(ourData);
     for(var i =0; i< ourData.length; i++)
     {
