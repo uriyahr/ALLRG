@@ -59,7 +59,7 @@ function filterRestaurantsandData()
             if(ourData[i][filter] === "FALSE")
             {
                 console.log(ourData[i]["entreename"]);
-                var filtered = '<p>' + ourData[i]["entreename"] + '</p>';
+                var filtered = '<p id="menu">' + ourData[i]["entreename"] + '</p>';
                 $("#filter").append(filtered);
             }
         }
@@ -71,7 +71,7 @@ function filterRestaurantsandData()
                 if(ourData[i][filter] === "FALSE")
                 {
                     console.log(ourData[i]["entreename"]);
-                    var filtered2 = '<p>' + ourData[i]["entreename"] + '</p>'; 
+                    var filtered2 = '<p id="menu">' + ourData[i]["entreename"] + '</p>'; 
                     $("#filter2").append(filtered2);
                 }
             }
