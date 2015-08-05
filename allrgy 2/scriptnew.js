@@ -39,7 +39,7 @@ function filterData(){
     {
         if(ourData[i][filter] === "FALSE") {
             //document.write(ourData[i]["entreename"]);
-            var filtered = '<p>' + ourData[i]["entreename"] + '</p>';
+            var filtered = '<li class="list-group-item" id="menu">' + ourData[i]["entreename"] + '</li>';
             $("#filter").append(filtered);
             // document.getElementById("food").innerHTML.append(printFood);
         }
@@ -59,7 +59,7 @@ function filterRestaurantsandData()
             if(ourData[i][filter] === "FALSE")
             {
                 console.log(ourData[i]["entreename"]);
-                var filtered = '<p id="menu">' + ourData[i]["entreename"] + '</p>';
+                var filtered = '<li class="list-group-item" id="menu">' + ourData[i]["entreename"] + '</li>';
                 $("#filter").append(filtered);
             }
         }
@@ -71,7 +71,7 @@ function filterRestaurantsandData()
                 if(ourData[i][filter] === "FALSE")
                 {
                     console.log(ourData[i]["entreename"]);
-                    var filtered2 = '<p id="menu">' + ourData[i]["entreename"] + '</p>'; 
+                    var filtered2 = '<li class="list-group-item" id="menu">' + ourData[i]["entreename"] + '</li>'; 
                     $("#filter2").append(filtered2);
                 }
             }
@@ -88,7 +88,7 @@ function showAppleMenu()
         if(ourData[i]["restaurantname"]==="Applebee's ")
         {
             //console.log(ourData[i]["entreename"]); 
-            var lineItem = '<p>' + ourData[i]["entreename"] + '</p>';
+            var lineItem = '<li class="list-group-item" id="menu">' + ourData[i]["entreename"] + '</li>';
             $("#apple").append(lineItem);
 
         }
